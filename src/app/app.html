@@ -1,1 +1,118 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-10">
+      <form>
+
+        <!-- Monthly salary -->
+        <div class="mb-3 row align-items-center">
+          <label for="monthlySalaryInput" class="col-sm-4 col-form-label text-end">Monatlicher Bruttolohn</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="monthlySalaryInput" placeholder="CHF">
+          </div>
+        </div>
+
+        <!-- Age -->
+        <div class="mb-3 row align-items-center">
+          <label for="ageInput" class="col-sm-4 col-form-label text-end">Alter</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="ageInput" placeholder="Jahre">
+          </div>
+        </div>
+
+        <!-- Church member -->
+        <div class="mb-3 row align-items-center">
+          <label for="churchMemberRadioBtnGroup" class="col-sm-4 col-form-label text-end">Kirchenmitglied</label>
+          <div class="btn-group col-sm-8" role="group" aria-label="Radio toggle button group for selecting if member of church" id="churchMemberRadioBtnGroup">
+            <!-- Yes -->
+            <input type="radio" class="btn-check" name="btnradio" id="churchMemberRadioBtn1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="churchMemberRadioBtn1">Ja</label>
+
+            <!-- No -->
+            <input type="radio" class="btn-check" name="btnradio" id="churchMemberRadioBtn2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="churchMemberRadioBtn2">Nein</label>
+          </div>
+        </div>
+
+        <!-- Status -->
+        <div class="mb-3 row align-items-center">
+          <label for="statusDropdown" class="col-sm-4 col-form-label text-end">Beziehungsstatus</label>
+          <div class="dropdown col-sm-8" id="statusDropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ledig
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">ledig</a></li>
+              <li><a class="dropdown-item" href="#">verheiratet (ein Verdiener)</a></li>
+              <li><a class="dropdown-item" href="#">verheiratet (zwei Verdiener)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Children -->
+        <div class="mb-3 row align-items-center">
+          <label for="childrenDropdown" class="col-sm-4 col-form-label text-end">Kinder</label>
+          <div class="dropdown col-sm-8" id="childrenDropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              keine
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">keine</a></li>
+              <li><a class="dropdown-item" href="#">1</a></li>
+              <li><a class="dropdown-item" href="#">2</a></li>
+              <li><a class="dropdown-item" href="#">3</a></li>
+              <li><a class="dropdown-item" href="#">4</a></li>
+              <li><a class="dropdown-item" href="#">5</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Canton of residence -->
+        <div class="mb-3 row align-items-center">
+          <label for="cantonOfResidenceDropdown" class="col-sm-4 col-form-label text-end">Wohnortskanton</label>
+          <div class="dropdown col-sm-8" id="cantonOfResidenceDropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Aargau
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Aargau (AG)</a></li>
+              <li><a class="dropdown-item" href="#">Appenzell Innerrhoden (AI)</a></li>
+              <li><a class="dropdown-item" href="#">Appenzell Ausserrhoden (AR)</a></li>
+              <li><a class="dropdown-item" href="#">Bern (BE)</a></li>
+              <li><a class="dropdown-item" href="#">Basel-Land (BL)</a></li>
+              <li><a class="dropdown-item" href="#">Basel-Stadt (BS)</a></li>
+              <li><a class="dropdown-item" href="#">Freiburg (FR)</a></li>
+              <li><a class="dropdown-item" href="#">Genf (GE)</a></li>
+              <li><a class="dropdown-item" href="#">Glarus (GL)</a></li>
+              <li><a class="dropdown-item" href="#">Graubünden (GR)</a></li>
+              <li><a class="dropdown-item" href="#">Jura (JU)</a></li>
+              <li><a class="dropdown-item" href="#">Luzern (LU)</a></li>
+              <li><a class="dropdown-item" href="#">Neuenburg (NE)</a></li>
+              <li><a class="dropdown-item" href="#">Nidwalden (NW)</a></li>
+              <li><a class="dropdown-item" href="#">Obwalden (OW)</a></li>
+              <li><a class="dropdown-item" href="#">St. Gallen (SG)</a></li>
+              <li><a class="dropdown-item" href="#">Schaffhausen (SH)</a></li>
+              <li><a class="dropdown-item" href="#">Solothurn (SO)</a></li>
+              <li><a class="dropdown-item" href="#">Schwyz (SZ)</a></li>
+              <li><a class="dropdown-item" href="#">Thurgau (TG)</a></li>
+              <li><a class="dropdown-item" href="#">Tessin (TI)</a></li>
+              <li><a class="dropdown-item" href="#">Uri (UR)</a></li>
+              <li><a class="dropdown-item" href="#">Waadt (VD)</a></li>
+              <li><a class="dropdown-item" href="#">Wallis (VS)</a></li>
+              <li><a class="dropdown-item" href="#">Zug (ZG)</a></li>
+              <li><a class="dropdown-item" href="#">Zürich (ZH)</a></li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
 <router-outlet />

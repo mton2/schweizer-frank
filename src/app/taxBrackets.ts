@@ -1,4 +1,4 @@
-export type TaxBracket = {
+export type AhkTaxBracket = {
   incomeMin: number;
   A0Y: number;
   H1Y: number;
@@ -10,7 +10,7 @@ export type TaxBracket = {
 };
 
 // Tarif A + H mit Kirche
-const ahkTaxBrackets: TaxBracket[] = [
+const ahkTaxBrackets: AhkTaxBracket[] = [
   {
     incomeMin: 1651,
     A0Y: 0.05,
@@ -44458,4 +44458,13 @@ export const cTaxBrackets: CTaxBracket[] = [
   },
 ];
 
-// Tarif G:
+// Tarif G: TODO
+
+export const taxBrackets = {
+  ahkTaxBrackets,
+  bkTaxBrackets,
+  ckTaxBrackets,
+  ahTaxBrackets,
+  bTaxBrackets,
+  cTaxBrackets,
+};

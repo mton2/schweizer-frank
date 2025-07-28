@@ -1,97 +1,161 @@
 <div class="col-12 col-md-6 col-lg-2">
-  <form>
-
-    <!-- Monthly salary -->
-    <div class="mb-3 row">
-      <label for="monthlySalaryInput" class="col-sm-4 col-form-label text-end">Bruttolohn</label>
-      <div class="col-sm-8">
-        <input type="number" class="form-control" id="monthlySalaryInput" placeholder="CHF">
-      </div>
+  <!-- Monthly salary -->
+  <div class="mb-3 row">
+    <label for="monthlySalaryInput" class="col-sm-4 col-form-label text-end"
+      >Bruttolohn</label
+    >
+    <div class="col-sm-8">
+      <input
+        type="number"
+        class="form-control"
+        id="monthlySalaryInput"
+        [(ngModel)]="enteredMonthlySalaryInput"
+        placeholder="CHF"
+      />
     </div>
+  </div>
 
-    <!-- Age -->
-    <div class="mb-3 row">
-      <label for="ageInput" class="col-sm-4 col-form-label text-end">Alter</label>
-      <div class="col-sm-8">
-        <input type="number" class="form-control" id="ageInput" placeholder="Jahre">
-      </div>
+  <!-- Age -->
+  <div class="mb-3 row">
+    <label for="ageInput" class="col-sm-4 col-form-label text-end">Alter</label>
+    <div class="col-sm-8">
+      <input
+        type="number"
+        class="form-control"
+        id="ageInput"
+        placeholder="Jahre"
+      />
     </div>
+  </div>
 
-    <!-- Church member -->
-    <div class="mb-3 row">
-      <label class="col-sm-4 col-form-label text-end">Kirchenmitglied</label>
-      <div class="btn-group col-sm-8" role="group" aria-label="Radio toggle button group for selecting if member of church" id="churchMemberRadioBtnGroup">
-        <!-- Yes -->
-        <input type="radio" class="btn-check" name="btnradio" id="churchMemberRadioBtn1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="churchMemberRadioBtn1">Ja</label>
+  <!-- Church member -->
+  <div class="mb-3 row">
+    <label class="col-sm-4 col-form-label text-end">Kirchenmitglied</label>
+    <div
+      class="btn-group col-sm-8"
+      role="group"
+      aria-label="Radio toggle button group for selecting if member of church"
+      id="churchMemberRadioBtnGroup"
+    >
+      <!-- Yes -->
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        value="yes"
+        [(ngModel)]="churchMember"
+        id="churchMemberRadioBtn1"
+        autocomplete="off"
+        checked
+      />
+      <label class="btn btn-outline-primary" for="churchMemberRadioBtn1"
+        >Ja</label
+      >
 
-        <!-- No -->
-        <input type="radio" class="btn-check" name="btnradio" id="churchMemberRadioBtn2" autocomplete="off">
-        <label class="btn btn-outline-primary" for="churchMemberRadioBtn2">Nein</label>
-      </div>
+      <!-- No -->
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        value="no"
+        [(ngModel)]="churchMember"
+        id="churchMemberRadioBtn2"
+        autocomplete="off"
+      />
+      <label class="btn btn-outline-primary" for="churchMemberRadioBtn2"
+        >Nein</label
+      >
     </div>
+  </div>
 
-    <!-- Status -->
-    <div class="mb-3 row">
-      <label for="statusDropdown" class="col-sm-4 col-form-label text-end">Beziehungsstatus</label>
-      <div class="dropdown col-sm-8">
-        <!-- w-100 passt die Breite des Buttons an das umgebende Element an -->
-        <button class="btn btn-primary dropdown-toggle w-100" type="button" id="statusDropdown" data-bs-toggle="dropdown">
-          {{ selectedStatus }}
-        </button>
-        <ul class="dropdown-menu">
-          <li *ngFor="let status of relationshipStatuses">
-            <a class="dropdown-item" href="#" (click)="selectedStatus = status">{{ status }}</a>
-          </li>
-        </ul>
-      </div>
+  <!-- Status -->
+  <div class="mb-3 row">
+    <label for="statusDropdown" class="col-sm-4 col-form-label text-end"
+      >Beziehungsstatus</label
+    >
+    <div class="dropdown col-sm-8">
+      <!-- w-100 passt die Breite des Buttons an das umgebende Element an -->
+      <button
+        class="btn btn-primary dropdown-toggle w-100"
+        type="button"
+        id="statusDropdown"
+        data-bs-toggle="dropdown"
+      >
+        {{ selectedStatus }}
+      </button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let status of relationshipStatuses">
+          <a class="dropdown-item" href="#" (click)="selectedStatus = status">{{
+            status
+          }}</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <!-- Children -->
-    <div class="mb-3 row">
-      <label for="childrenDropdown" class="col-sm-4 col-form-label text-end">Kinder</label>
-      <div class="dropdown col-sm-8">
-        <!-- w-100 passt die Breite des Buttons an das umgebende Element an -->
-        <button class="btn btn-primary dropdown-toggle w-100 " type="button" id="childrenDropdown"  data-bs-toggle="dropdown">
-          {{ selectedChildren }}
-        </button>
-        <ul class="dropdown-menu">
-          <li *ngFor="let child of childrenOptions">
-            <a class="dropdown-item" href="#" (click)="selectedChildren = child">{{ child }}</a>
-          </li>
-        </ul>
-      </div>
+  <!-- Children -->
+  <div class="mb-3 row">
+    <label for="childrenDropdown" class="col-sm-4 col-form-label text-end"
+      >Kinder</label
+    >
+    <div class="dropdown col-sm-8">
+      <!-- w-100 passt die Breite des Buttons an das umgebende Element an -->
+      <button
+        class="btn btn-primary dropdown-toggle w-100"
+        type="button"
+        id="childrenDropdown"
+        data-bs-toggle="dropdown"
+      >
+        {{ selectedChildren }}
+      </button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let child of childrenOptions">
+          <a
+            class="dropdown-item"
+            href="#"
+            (click)="selectedChildren = child"
+            >{{ child }}</a
+          >
+        </li>
+      </ul>
     </div>
+  </div>
 
-
-    <!-- Canton of residence -->
-    <div class="mb-3 row">
-      <label for="cantonDropdown" class="col-sm-4 col-form-label text-end">Wohnortskanton</label>
-      <div class="dropdown col-sm-8">
-        <!-- w-100 passt die Breite des Buttons an das umgebende Element an -->
-        <button 
-          class="btn btn-primary dropdown-toggle w-100" 
-          type="button" 
-          id="cantonDropdown" 
-          data-bs-toggle="dropdown" 
-          aria-expanded="false">
-          {{ selectedCanton }}
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="cantonDropdown">
-          <li *ngFor="let canton of cantons">
-            <a class="dropdown-item" href="#" (click)="selectedCanton = canton">{{ canton }}</a>
-          </li>
-        </ul>
-      </div>
+  <!-- Canton of residence -->
+  <div class="mb-3 row">
+    <label for="cantonDropdown" class="col-sm-4 col-form-label text-end"
+      >Wohnortskanton</label
+    >
+    <div class="dropdown col-sm-8">
+      <!-- w-100 passt die Breite des Buttons an das umgebende Element an -->
+      <button
+        class="btn btn-primary dropdown-toggle w-100"
+        type="button"
+        id="cantonDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {{ selectedCanton }}
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="cantonDropdown">
+        <li *ngFor="let canton of cantons">
+          <a class="dropdown-item" href="#" (click)="selectedCanton = canton">{{
+            canton
+          }}</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="mb-3 row">
-      <div>
-        <button type="submit" class="btn btn-primary w-100">Submit</button>
-      </div>
+  <div class="mb-3 row">
+    <div>
+      <button class="btn btn-primary w-100" (click)="calculateTax()">
+        Submit
+      </button>
     </div>
-
-  </form>
+  </div>
+  Ergebnis Steuern pro Jahr:
+  {{ calculatedTax }}
 </div>
 
 <router-outlet />

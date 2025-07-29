@@ -8,3 +8,15 @@
 
 // 🧱 Bootstrap importieren
 @import "bootstrap/scss/bootstrap";
+
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("assets/Bern-Luftansicht.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Optional: Bild bleibt beim Scrollen */
+}

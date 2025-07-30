@@ -33,6 +33,7 @@
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
+            "outputPath": "dist/schweizer-frank",
             "ssr": {
               "entry": "src/server.ts"
             }
@@ -90,6 +91,9 @@
             ],
             "styles": ["src/styles.scss"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

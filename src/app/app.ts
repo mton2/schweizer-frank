@@ -128,6 +128,24 @@ export class App {
         break;
     }
   }
+
+  // TODO: Nochmal intensiven Test machen, ob diese Berechnung
+  // auch wirklich exakt ist oder doch decimal.js verwendet
+  // werden soll
+  calculateQuellensteuerAbgabe() {
+    return (
+      (this.enteredMonthlySalaryInput * this.calculatedTax) /
+      100
+    ).toFixed(2);
+  }
+
+  calculateAhvIvEoBeitrag() {
+    return (this.enteredMonthlySalaryInput * 0.053).toFixed(2);
+  }
+
+  calculateAlvEoBeitrag() {
+    return (this.enteredMonthlySalaryInput * 0.011).toFixed(2);
+  }
 }
 
 enum RelationshipStatus {

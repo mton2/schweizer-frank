@@ -167,8 +167,10 @@
         </button>
       </div>
     </div>
-    Ergebnis Steuern pro Jahr:
-    {{ calculatedTax }}
+    <p>Steuersatz: {{ calculatedTax }} %</p>
+    <p>Quellensteuerabgabe: CHF {{ calculateQuellensteuerAbgabe() }}</p>
+    <p>AHV/IV/EO-Beitrag: CHF {{ calculateAhvIvEoBeitrag() }}</p>
+    <p>ALV-Beitrag: CHF {{ calculateAlvEoBeitrag() }}</p>
   </div>
 </div>
 

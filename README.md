@@ -57,3 +57,10 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Github Pages
+
+Make Github Repo public
+In project settings on github.com, choose source branch and root as options
+ng build --base-href "https://mton2.github.io/schweizer-frank/"
+ngh angular-cli-ghpages --dir=dist/schweizer-frank/browser

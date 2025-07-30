@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:schweizer-frank": "node dist/schweizer-frank/server/server.mjs"
+    "test": "ng test"
   },
   "prettier": {
     "overrides": [
